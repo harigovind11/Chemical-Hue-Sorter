@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
                     if (tube != selectedTube)
                     {
                         bool success = selectedTube.CanPourInto(tube);
-                        selectedTube.PourInto(tube);
+                        //selectedTube.PourInto(tube);
+                       StartCoroutine(selectedTube.AnimatePourTo(tube));
 
                         if (success)
                         {
